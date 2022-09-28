@@ -10,5 +10,4 @@ COPY . .
 
 RUN yarn coverage
 
-RUN yarn build
 
