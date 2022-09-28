@@ -10,13 +10,13 @@ script:
   - docker run nguyentaithao/travis-vite yarn coverage
 
 deploy: 
-  - provider: elasticbeanstalk
-  - region: "ap-northeast-1"
-  - app: "travis-vite"
-  - env: "Travisvite-env"
-  - bucket_name: "elasticbeanstalk-ap-northeast-1-687900780546"
-  - bucket_path: "travis-vite"
-  - on:
+  provider: elasticbeanstalk
+  region: "ap-northeast-1"
+  app: "travis-vite"
+  env: "Travisvite-env"
+  bucket_name: "elasticbeanstalk-ap-northeast-1-687900780546"
+  bucket_path: "travis-vite"
+  on:
     branch: master
-  - access_key_id: $AWS_ACCESS_KEY
-  - secret_access_key: $AWS_SECRET_KEY
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
