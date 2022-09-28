@@ -11,13 +11,4 @@ services:
     volumes:
       - /app/node_modules
       - ./:/app
-  web:
-    container_name: web
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "8080:80"
-    volumes:
-      - /app/node_modules
-      - ./:/app
+
