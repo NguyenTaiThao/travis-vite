@@ -10,5 +10,5 @@ COPY . .
 
 RUN yarn coverage
 
-CMD ["yarn", "build"]
+RUN yarn build
 
