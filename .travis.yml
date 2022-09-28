@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t nguyentaithao/travis-vite -f Dockerfile.dev .
+
+script:
+  - docker run -e nguyentaithao/travis-vite yarn coverage
